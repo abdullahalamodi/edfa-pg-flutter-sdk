@@ -85,6 +85,18 @@ class EdfaPgSdk {
     return EdfaPgSdkPlatform.instance.config(key, password, enableDebug);
   }
 
+  Future<bool> setSuccessAnimation({required String url}){
+    return EdfaPgSdkPlatform.instance.setSuccessAnimation(url);
+  }
+
+  Future<bool> setFailureAnimation({required String url}){
+    return EdfaPgSdkPlatform.instance.setFailureAnimation(url);
+  }
+
+  Future<bool> setAnimationDelay({required int delay}){
+    return EdfaPgSdkPlatform.instance.setAnimationDelay(delay);
+  }
+
 
   EdfaPgAdapters ADAPTER = EdfaPgAdapters();
   Helpers HELPER = Helpers();

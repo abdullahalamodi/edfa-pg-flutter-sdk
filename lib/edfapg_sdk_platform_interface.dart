@@ -31,4 +31,16 @@ abstract class EdfaPgSdkPlatform extends PlatformInterface {
   Future<bool> config(String key,String password, bool enableDebug) {
     throw UnimplementedError('config() has not been implemented.');
   }
+
+  Future<bool> setSuccessAnimation(String url) async {
+    throw UnimplementedError('config() has not been implemented.');
+  }
+
+  Future<bool> setFailureAnimation(String url) async {
+    throw UnimplementedError('config() has not been implemented.');
+  }
+
+  Future<bool> setAnimationDelay(int delay) async {
+    throw UnimplementedError('config() has not been implemented.');
+  }
 }

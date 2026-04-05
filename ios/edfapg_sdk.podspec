@@ -1,12 +1,16 @@
+EDFAPG_SDK_VERSION = '~> 2.1.4'
+# if File.exist?(File.join(__dir__, 'edfapay_properties.rb'))
+#     require_relative 'edfapay_properties'
+# else
+# EDFAPG_SDK_VERSION = '~> 2.1.4'
+# end
+
+
+
 #
 # To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html.
 # Run `pod lib lint expresspay_sdk.podspec` to validate before publishing.
 #
-if File.exist?(File.join(__dir__, 'edfapay_properties.rb'))
-    require_relative 'edfapay_properties'
-else
-    EDFAPG_SDK_VERSION = '~> 2.1.3'
-end
 
 Pod::Spec.new do |s|
   s.name             = 'edfapg_sdk'
@@ -22,7 +26,6 @@ EdfaPgSdk Flutter plugin was developed and designed with one purpose: to help th
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
   s.dependency 'EdfaPgSdk', EDFAPG_SDK_VERSION
-#   s.dependency 'EdfaPgSdk', '~> 2.1.2'
   s.platform = :ios, '12.0'
 
   # Flutter.framework does not contain a i386 slice.

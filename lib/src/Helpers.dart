@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 
 class Helpers {
 
+  @Deprecated("Use generateUniqueId() instead")
   String generateUUID() {
     Random random = Random(DateTime.now().millisecond);
 
@@ -24,7 +25,13 @@ class Helpers {
 
     final StringBuffer buffer = StringBuffer();
     buffer.writeAll(uuid);
-    return buffer.toString();
+    String uid = buffer.toString().replaceAll("-", "");
+    return "$uid${DateTime.now().millisecondsSinceEpoch}";
+  }
+
+
+  String generateUniqueId() {
+    return generateUUID();
   }
 }
 

@@ -78,6 +78,9 @@ easily integrate the EdfaPay API Payment Platform for a specific merchant.
 > >      pg_android: "2.1.5"
 > >      pg_ios: "2.1.3"
 > > ```
+> >**Important Note:** After adding the native versions developer must run below command in terminal at project path
+> >- `flutter pub get`
+> >- `dart run edfapg_sdk:configure`
 
 > [!IMPORTANT]
 > ### Configuring the Proguard Rule

@@ -29,16 +29,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 def getPgSdkVersion() {
-    def pg_android_fallback = "2.1.5"
-
-    def properties = new Properties()
-    def propertiesFile = new File(buildFile.parent, 'edfapay_properties.properties')
-    if (propertiesFile.exists()) {
-        properties.load(new FileInputStream(propertiesFile))
-    }
-    def v = properties.getProperty('EDFAPG_SDK_VERSION', pg_android_fallback)
-    println("EDFAPG_SDK_VERSION: $v")
-    return v
+    return "2.1.9+"
 }
 
 
@@ -78,11 +69,30 @@ android {
     defaultConfig {
         minSdkVersion 21
     }
+}
 
-    dependencies {
-        implementation "com.github.edfapay:edfa-pg-android-sdk:${getPgSdkVersion()}"
-//        implementation 'com.edfapg:sdk:1.0.5' // Local Repository
-//        implementation project(path: ':edfa-pg-sdk') // Local Module
-        implementation 'com.google.code.gson:gson:2.9.0'
+configurations {
+    // 1. Define a custom configuration for "bleeding-edge" dependencies
+    frequentUpdate
+
+    // 2. Make standard implementation extend it so these libs are on the classpath
+    implementation.extendsFrom frequentUpdate
+}
+
+configurations.frequentUpdate {
+    resolutionStrategy {
+        // 3. Force check for dynamic versions (e.g., 2.1.+) every time
+        cacheDynamicVersionsFor 0, 'seconds'
+
+        // 4. Force check for SNAPSHOT versions every time (optional but recommended)
+        cacheChangingModulesFor 0, 'seconds'
     }
+}
+
+
+
+dependencies {
+//    frequentUpdate "com.github.edfapay:edfa-pg-android-sdk:${getPgSdkVersion()}"
+        implementation project(path: ':edfa-pg-sdk') // Local Module
+    implementation 'com.google.code.gson:gson:2.9.0'
 }

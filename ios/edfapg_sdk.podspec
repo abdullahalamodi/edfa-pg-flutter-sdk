@@ -1,4 +1,4 @@
-EDFAPG_SDK_VERSION = '~> 2.1.4'
+EDFAPG_SDK_VERSION = '~> 2.1.5'
 # if File.exist?(File.join(__dir__, 'edfapay_properties.rb'))
 #     require_relative 'edfapay_properties'
 # else

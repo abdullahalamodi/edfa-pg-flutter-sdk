@@ -25,12 +25,9 @@ public class EdfaPaySdkEventChannels: NSObject{
     var transactionStatus:FlutterEventChannel? = nil;
     var transactionDetail:FlutterEventChannel? = nil;
     var transactionLogs:FlutterEventChannel? = nil;
-
     
-    public func initiate(with flutterViewController: FlutterViewController) {
+    public func initiate(with messenger:FlutterBinaryMessenger) {
         
-        let messenger = flutterViewController.binaryMessenger
-
         cardpay = FlutterEventChannel(name: "com.edfapg.flutter.sdk.cardpay", binaryMessenger: messenger)
         cardDetailPay = FlutterEventChannel(name: "com.edfapg.flutter.sdk.cardDetailPay", binaryMessenger: messenger)
         sadadpay = FlutterEventChannel(name: "com.edfapg.flutter.sdk.sadadpay", binaryMessenger: messenger)

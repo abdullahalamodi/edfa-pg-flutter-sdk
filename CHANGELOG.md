@@ -1,14 +1,26 @@
-## 2.0.11
-  - Deprecate Native Version Configuration in `pubspec.yaml`
-  - Fixed the UID generation
-  - Fixed & Enhance the 3DS Redirecion
-  - Added Animation Support at 3DS Redirection **(Android Only)**
+## 2.0.11+2
+- Deprecate Native Version Configuration in `pubspec.yaml`
+- Fixed the UID generation
+- Fixed & Enhance the 3DS Redirecion
+- Added Animation Support at 3DS Redirection
     - **`EdfaPgSdk.setSuccessAnimation`**
-      - allow to pass web url which will loaded after transaction complete with default delay
+        - allow to pass web url which will loaded after transaction complete with default delay
     - **`EdfaPgSdk.setFailureAnimation`**
-      - allow to pass web url which will loaded after transaction complete with default delay
+        - allow to pass web url which will loaded after transaction complete with default delay
     - **`EdfaPgSdk.setAnimationDelay`**
-      - allow to pass delay to override default delay in millis after transaction complete
+        - allow to pass delay to override default delay in millis after transaction complete
+
+## 2.0.11
+- Deprecate Native Version Configuration in `pubspec.yaml`
+- Fixed the UID generation
+- Fixed & Enhance the 3DS Redirecion
+- Added Animation Support at 3DS Redirection **(Android Only)**
+    - **`EdfaPgSdk.setSuccessAnimation`**
+        - allow to pass web url which will loaded after transaction complete with default delay
+    - **`EdfaPgSdk.setFailureAnimation`**
+        - allow to pass web url which will loaded after transaction complete with default delay
+    - **`EdfaPgSdk.setAnimationDelay`**
+        - allow to pass delay to override default delay in millis after transaction complete
 
 ## 2.0.10+1
   - **Default Native Versions:** Android **2.1.5** | iOS **~> 2.1.3**

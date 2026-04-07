@@ -13,15 +13,16 @@ public class EdfaPgSdkPlugin: NSObject, FlutterPlugin, PKPaymentAuthorizationVie
     }
     
     
+    private var registrar:FlutterPluginRegistrar? = nil
+    
     public static func register(with registrar: FlutterPluginRegistrar) {
+        let instance = EdfaPgSdkPlugin()
+        instance.registrar = registrar
         
-        if let flutterViewController = UIApplication.shared.delegate?.window??.rootViewController as? FlutterViewController{            
-            events.initiate(with: flutterViewController)
-            methods.initiate(with: flutterViewController)
-        }
-        
-        registrar.addMethodCallDelegate(EdfaPgSdkPlugin(), channel: methods.edfaPaySdk!)
-        
+        events.initiate(with: registrar.messenger())
+        methods.initiate(with: registrar.messenger())
+        registrar.addMethodCallDelegate(instance, channel: methods.edfaPaySdk!)
+
     }
     
     public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
@@ -29,6 +30,12 @@ public class EdfaPgSdkPlugin: NSObject, FlutterPlugin, PKPaymentAuthorizationVie
             getPlatformVersion(call, result: result)
         }else if call.method == methods.methodConfig{
             config(call, result: result)
+        }else if call.method == methods.methodSetAnimationDelay{
+            setAnimationDelay(call, result: result)
+        }else if call.method == methods.methodSetFailureAnimation{
+            setFailureAnimation(call, result: result)
+        }else if call.method == methods.methodSetSuccessAnimation{
+            setSuccessAnimation(call, result: result)
         }
     }
     
@@ -73,8 +80,47 @@ extension EdfaPgSdkPlugin{
                 EdfaPgSdk.enableLogs()
             }
             EdfaPgSdk.config(credentials)
+            result(true)
         }
     }
     
+}
+
+
+
+extension EdfaPgSdkPlugin{
+    private func setSuccessAnimation(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
+        if let params = call.arguments as? [Any],
+           let url = params[0] as? String {
+            do{
+                try EdfaPgSdk.setSuccessAnimation(url: url)
+                result(true)
+            }catch{
+                result(FlutterError(code: "505", message: error.localizedDescription, details: nil))
+            }
+        }
+    }
+    private func setFailureAnimation(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
+        if let params = call.arguments as? [Any],
+           let url = params[0] as? String {
+            do{
+                try EdfaPgSdk.setFailureAnimation(url: url)
+                result(true)
+            }catch{
+                result(FlutterError(code: "505", message: error.localizedDescription, details: nil))
+            }
+        }
+    }
+    private func setAnimationDelay(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
+        if let params = call.arguments as? [Any],
+           let delay = params[0] as? Int {
+            do{
+                try EdfaPgSdk.setAnimationDelay(delay: delay)
+                result(true)
+            }catch{
+                result(FlutterError(code: "505", message: error.localizedDescription, details: nil))
+            }
+        }
+    }
 }
 

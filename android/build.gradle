@@ -12,8 +12,6 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:7.2.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "org.yaml:snakeyaml:2.0"
-
     }
 }
 
@@ -92,7 +90,7 @@ configurations.frequentUpdate {
 
 
 dependencies {
-//    frequentUpdate "com.github.edfapay:edfa-pg-android-sdk:${getPgSdkVersion()}"
-        implementation project(path: ':edfa-pg-sdk') // Local Module
+    frequentUpdate "com.github.edfapay:edfa-pg-android-sdk:${getPgSdkVersion()}"
+//        implementation project(path: ':edfa-pg-sdk') // Local Module
     implementation 'com.google.code.gson:gson:2.9.0'
 }

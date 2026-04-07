@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7edbbd58-3e74-4381-8c7a-bb19e5d1a446" name="Changes" comment="Passing native versions from pubspec.yaml of project">
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/version" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/version" afterDir="false" />
+    <list default="true" id="7edbbd58-3e74-4381-8c7a-bb19e5d1a446" name="Changes" comment="  - Deprecate the native version configuration&#10;  - Fixed the UID generation&#10;  - Fixed &amp; Enhance the 3DS Redirecion&#10;  - Added Animation Support at 3DS Redirection **(Android Only)**&#10;    - **`EdfaPgSdk.setSuccessAnimation`**&#10;      - allow to pass web url which will loaded after transaction complete with default delay&#10;    - **`EdfaPgSdk.setFailureAnimation`**&#10;      - allow to pass web url which will loaded after transaction complete with default delay&#10;    - **`EdfaPgSdk.setAnimationDelay`**&#10;      - allow to pass delay to override default delay in millis after transaction complete">
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -299,7 +299,23 @@
       <option name="project" value="LOCAL" />
       <updated>1767027392804</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="  - Deprecate the native version configuration&#10;  - Fixed the UID generation&#10;  - Fixed &amp; Enhance the 3DS Redirecion&#10;  - Added Animation Support at 3DS Redirection **(Android Only)**&#10;    - **`EdfaPgSdk.setSuccessAnimation`**&#10;      - allow to pass web url which will loaded after transaction complete with default delay&#10;    - **`EdfaPgSdk.setFailureAnimation`**&#10;      - allow to pass web url which will loaded after transaction complete with default delay&#10;    - **`EdfaPgSdk.setAnimationDelay`**&#10;      - allow to pass delay to override default delay in millis after transaction complete">
+      <option name="closed" value="true" />
+      <created>1775395374781</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1775395374781</updated>
+    </task>
+    <task id="LOCAL-00023" summary="  - Deprecate the native version configuration&#10;  - Fixed the UID generation&#10;  - Fixed &amp; Enhance the 3DS Redirecion&#10;  - Added Animation Support at 3DS Redirection **(Android Only)**&#10;    - **`EdfaPgSdk.setSuccessAnimation`**&#10;      - allow to pass web url which will loaded after transaction complete with default delay&#10;    - **`EdfaPgSdk.setFailureAnimation`**&#10;      - allow to pass web url which will loaded after transaction complete with default delay&#10;    - **`EdfaPgSdk.setAnimationDelay`**&#10;      - allow to pass delay to override default delay in millis after transaction complete">
+      <option name="closed" value="true" />
+      <created>1775395413303</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1775395413303</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -329,7 +345,8 @@
     <MESSAGE value="Update .gitignore" />
     <MESSAGE value="Payment with Sadad: Added feature to pay with SADAD number." />
     <MESSAGE value="Passing native versions from pubspec.yaml of project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Passing native versions from pubspec.yaml of project" />
+    <MESSAGE value="  - Deprecate the native version configuration&#10;  - Fixed the UID generation&#10;  - Fixed &amp; Enhance the 3DS Redirecion&#10;  - Added Animation Support at 3DS Redirection **(Android Only)**&#10;    - **`EdfaPgSdk.setSuccessAnimation`**&#10;      - allow to pass web url which will loaded after transaction complete with default delay&#10;    - **`EdfaPgSdk.setFailureAnimation`**&#10;      - allow to pass web url which will loaded after transaction complete with default delay&#10;    - **`EdfaPgSdk.setAnimationDelay`**&#10;      - allow to pass delay to override default delay in millis after transaction complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="  - Deprecate the native version configuration&#10;  - Fixed the UID generation&#10;  - Fixed &amp; Enhance the 3DS Redirecion&#10;  - Added Animation Support at 3DS Redirection **(Android Only)**&#10;    - **`EdfaPgSdk.setSuccessAnimation`**&#10;      - allow to pass web url which will loaded after transaction complete with default delay&#10;    - **`EdfaPgSdk.setFailureAnimation`**&#10;      - allow to pass web url which will loaded after transaction complete with default delay&#10;    - **`EdfaPgSdk.setAnimationDelay`**&#10;      - allow to pass delay to override default delay in millis after transaction complete" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

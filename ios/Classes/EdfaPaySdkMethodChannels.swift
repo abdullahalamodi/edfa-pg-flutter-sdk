@@ -16,11 +16,12 @@ public class EdfapaySdkMethodChannels: NSObject{
 
     final let methodGetPlatformVersion = "getPlatformVersion";
     final let methodConfig = "config";
+    final let methodSetSuccessAnimation = "setSuccessAnimation";
+    final let methodSetFailureAnimation = "setFailureAnimation";
+    final let methodSetAnimationDelay = "setAnimationDelay";
 
-    public func initiate(with flutterViewController: FlutterViewController){
-        
-        let messenger = flutterViewController.binaryMessenger
-        
+    public func initiate(with messenger: FlutterBinaryMessenger){
+            
         edfaPaySdk = FlutterMethodChannel(name: "com.edfapg.flutter.sdk", binaryMessenger: messenger)
     }
     

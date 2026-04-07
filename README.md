@@ -9,7 +9,9 @@ easily integrate the EdfaPay API Payment Platform for a specific merchant.
 [Wiki](https://github.com/edfapay/edfa-pg-flutter-sdk/wiki/2.0.9-%E2%80%90-Flutter-EdfaPay-Payment-Gateway-SDK-Integration-Guide)
 
 ## Changelogs
-[2.0.10 - 28/12/2025](https://pub.dev/packages/edfapg_sdk/versions/2.0.10/changelog#2010)
+[2.0.11+2 - 08/04/2026](https://pub.dev/packages/edfapg_sdk/versions/2.0.11+1/changelog#20111)
+! [2.0.11+1 - 05/04/2026](https://pub.dev/packages/edfapg_sdk/versions/2.0.11+1/changelog#20111)
+| [2.0.10 - 28/12/2025](https://pub.dev/packages/edfapg_sdk/versions/2.0.10/changelog#2010)
 | [2.0.9 - 03/11/2025](https://pub.dev/packages/edfapg_sdk/versions/2.0.9/changelog#209)
 
 ## Installation
